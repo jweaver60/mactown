@@ -128,6 +128,12 @@ function bones_scripts_and_styles() {
     // modernizr (without media query polyfill)
     wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
+    // bootstrap 3.0.0 JS
+    wp_register_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/library/js/libs/bootstrap.min.js', array( 'jquery' ), '3.0.0', false);
+
+    // bootstrap 3.0.0 CSS
+    wp_register_style( 'bootstrap-css', get_stylesheet_directory_uri(). '/library/css/bootstrap.min.css', array(), '3.0.0', 'all');
+
     // register main stylesheet
     wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
@@ -142,8 +148,18 @@ function bones_scripts_and_styles() {
     //adding scripts file in the footer
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
+    // let's deal with jQuery now
+    if (!is_admin()) add_action("wp_enqueue_scripts", "mactown_jquery_enqueue", 11);
+		function mactown_jquery_enqueue() {
+		   wp_deregister_script('jquery');
+		   wp_register_script('jquery', "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null);
+		   wp_enqueue_script('jquery');
+		}
+
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
+    wp_enqueue_script( 'bootstrap-js' );
+    wp_enqueue_style( 'bootstrap-css' );
     wp_enqueue_style( 'bones-stylesheet' );
     wp_enqueue_style( 'bones-ie-only' );
 
