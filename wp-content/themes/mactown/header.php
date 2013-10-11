@@ -41,23 +41,31 @@
 
 	<body <?php body_class(); ?>>
 
-		<div id="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				  <!-- Brand and toggle get grouped for better mobile display -->
+				  <div class="navbar-header">
+				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				      <span class="sr-only">Toggle navigation</span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				    </button>
+				    <a class="navbar-brand" href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/logo-gray.png" alt="MacTown"></a>
+				  </div>
 
-			<header class="header" role="banner">
-
-				<div id="inner-header" class="wrap clearfix">
-
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
-
-
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
-
-				</div> <?php // end #inner-header ?>
-
-			</header> <?php // end header ?>
+				  <!-- Collect the nav links, forms, and other content for toggling -->
+				  <div class="collapse navbar-collapse navbar-ex1-collapse">
+				    <ul class="nav navbar-nav navbar-right">
+				      <li><a href="#">Home</a></li>
+				      <li><a href="#">About</a></li>
+				      <li><a href="#">Services</a></li>
+				      <li><a href="#">Trending</a></li>
+				      <li><a href="#">Retail</a></li>
+				      <li><a href="#">Contact</a></li>
+				    </ul>
+				  </div><!-- /.navbar-collapse -->
+				</nav>
+			</div>
+		</div>

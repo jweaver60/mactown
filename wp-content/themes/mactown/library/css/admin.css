@@ -1,0 +1,9 @@
+/* line 3, ../scss/admin.scss */
+#acf-col-right {
+  display: none;
+}
+
+/* line 7, ../scss/admin.scss */
+#acf-col-left {
+  margin-right: 0px;
+}
