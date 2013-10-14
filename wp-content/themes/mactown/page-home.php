@@ -19,10 +19,13 @@ Template Name: Home Page
 
 				<!-- Caption -->
 				<div class="carousel-caption">
-					<div class="caption-inner">
-				    <span class="line"></span><h4 class="first-slider-caption"><?php the_field('slider_caption_line_1', 5); ?></h4><span class="line"></span>
-				    <h2 class="second-slider-caption"><?php the_field('slider_caption_line_2', 5); ?></h2>
-				  </div>
+					<div class="caption-wrapper">
+						<div class="caption-inner">
+					    	<span class="line"></span><h4 class="first-slider-caption"><?php the_field('slider_caption_line_1', 5); ?></h4><span class="line"></span>
+					    	<h2 class="second-slider-caption"><?php the_field('slider_caption_line_2', 5); ?></h2>
+					    	<span class="line bottom"></span>
+					  	</div>
+					</div>
 			  </div>
 			  
 			  <!-- Wrapper for slides -->

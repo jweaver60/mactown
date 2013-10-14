@@ -119,12 +119,33 @@ you can use the generic selector below, but it's slower:
     color: #999;
   }
 
-  /* line 17, ../scss/_768up.scss */
+  /* line 18, ../scss/_768up.scss */
+  #carousel-home-page .carousel-caption .caption-wrapper .caption-inner {
+    padding: 0;
+  }
+  /* line 20, ../scss/_768up.scss */
+  #carousel-home-page .carousel-caption .caption-wrapper .caption-inner .line {
+    width: 28%;
+    margin-top: -5px;
+    display: inline-block !important;
+    border-top: 2px solid white;
+    height: 6px;
+  }
+  /* line 26, ../scss/_768up.scss */
+  #carousel-home-page .carousel-caption .caption-wrapper .caption-inner .line.bottom {
+    width: 100%;
+  }
+  /* line 30, ../scss/_768up.scss */
+  #carousel-home-page .carousel-caption .caption-wrapper .caption-inner .first-slider-caption {
+    display: inline-block;
+    width: 44%;
+  }
+  /* line 39, ../scss/_768up.scss */
   #carousel-home-page .carousel-control .icon-prev {
     height: 45px !important;
     left: 15px !important;
   }
-  /* line 21, ../scss/_768up.scss */
+  /* line 43, ../scss/_768up.scss */
   #carousel-home-page .carousel-control .icon-next {
     height: 45px !important;
   }
@@ -185,11 +206,33 @@ body {
 }
 /* line 68, ../scss/style.scss */
 #carousel-home-page .carousel-caption {
-  display: table;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
 }
-/* line 71, ../scss/style.scss */
-#carousel-home-page .carousel-caption .first-slider-caption {
+/* line 76, ../scss/style.scss */
+#carousel-home-page .carousel-caption .caption-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: table;
+}
+/* line 81, ../scss/style.scss */
+#carousel-home-page .carousel-caption .caption-wrapper .caption-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10%;
+}
+/* line 85, ../scss/style.scss */
+#carousel-home-page .carousel-caption .caption-wrapper .caption-inner .line {
+  display: none;
+}
+/* line 88, ../scss/style.scss */
+#carousel-home-page .carousel-caption .caption-wrapper .caption-inner .first-slider-caption {
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 3px;
@@ -199,30 +242,30 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 81, ../scss/style.scss */
-#carousel-home-page .carousel-caption .second-slider-caption {
+/* line 98, ../scss/style.scss */
+#carousel-home-page .carousel-caption .caption-wrapper .caption-inner .second-slider-caption {
   text-transform: uppercase;
   font-size: 2em;
 }
-/* line 87, ../scss/style.scss */
+/* line 106, ../scss/style.scss */
 #carousel-home-page .carousel-control.left, #carousel-home-page .carousel-control.right {
   background-image: none;
   background-repeat: no-repeat;
 }
-/* line 91, ../scss/style.scss */
+/* line 110, ../scss/style.scss */
 #carousel-home-page .carousel-control .icon-prev {
   background-color: black;
   height: 30px;
   left: 10px;
 }
-/* line 96, ../scss/style.scss */
+/* line 115, ../scss/style.scss */
 #carousel-home-page .carousel-control .icon-next {
   background-color: black;
   height: 30px;
   left: auto;
   right: 0px;
 }
-/* line 104, ../scss/style.scss */
+/* line 123, ../scss/style.scss */
 #carousel-home-page .carousel-indicators li {
   border-radius: 0px;
   width: 30px;
@@ -231,7 +274,7 @@ body {
   border: none;
   opacity: 0.5;
 }
-/* line 111, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 #carousel-home-page .carousel-indicators li.active {
   background-color: #00cae9;
   opacity: 1.0;
@@ -239,17 +282,17 @@ body {
   margin: 1px;
 }
 
-/* line 121, ../scss/style.scss */
+/* line 140, ../scss/style.scss */
 .with-gray-bg {
   background-color: #f3f3f3;
 }
 
-/* line 125, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 .with-padding {
   padding: 5em;
 }
 
-/* line 129, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 .lighter {
   color: #818181;
   font-size: 1.25em;
@@ -257,11 +300,11 @@ body {
   margin-top: 0.55em;
 }
 
-/* line 136, ../scss/style.scss */
+/* line 155, ../scss/style.scss */
 .block-header {
   margin-bottom: 1.5em;
 }
-/* line 138, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 .block-header h2 {
   text-transform: uppercase;
   text-align: center;
@@ -271,82 +314,82 @@ body {
   padding: 0;
   color: #2f353e;
 }
-/* line 146, ../scss/style.scss */
+/* line 165, ../scss/style.scss */
 .block-header h2:last-child {
   font-size: 3.55em;
 }
 
-/* line 152, ../scss/style.scss */
+/* line 171, ../scss/style.scss */
 .footer {
   background-color: #25292c;
   padding: 2em;
   color: #7f8691;
 }
-/* line 156, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 .footer .footer-logo {
   width: 120px;
   margin-bottom: 1em;
 }
-/* line 160, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .footer h2 {
   color: white;
   font-size: 1.5em;
   font-weight: 400;
   margin-top: 1.5em;
 }
-/* line 166, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
 .footer p {
   margin-bottom: 4px;
   font-size: 0.9em;
 }
-/* line 171, ../scss/style.scss */
+/* line 190, ../scss/style.scss */
 .footer .footer-social-icons ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 175, ../scss/style.scss */
+/* line 194, ../scss/style.scss */
 .footer .footer-social-icons ul li {
   display: inline-block;
   margin-right: 1em;
 }
-/* line 178, ../scss/style.scss */
+/* line 197, ../scss/style.scss */
 .footer .footer-social-icons ul li a {
   color: #666d75;
   font-size: 2em;
   text-decoration: none;
 }
-/* line 182, ../scss/style.scss */
+/* line 201, ../scss/style.scss */
 .footer .footer-social-icons ul li a:hover {
   color: white;
 }
-/* line 190, ../scss/style.scss */
+/* line 209, ../scss/style.scss */
 .footer .footer-support-icons ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   float: right;
 }
-/* line 195, ../scss/style.scss */
+/* line 214, ../scss/style.scss */
 .footer .footer-support-icons ul li {
   display: inline-block;
   margin-left: 1em;
 }
-/* line 198, ../scss/style.scss */
+/* line 217, ../scss/style.scss */
 .footer .footer-support-icons ul li a {
   color: #666d75;
   font-size: 2em;
   text-decoration: none;
 }
-/* line 202, ../scss/style.scss */
+/* line 221, ../scss/style.scss */
 .footer .footer-support-icons ul li a:hover {
   color: white;
 }
-/* line 209, ../scss/style.scss */
+/* line 228, ../scss/style.scss */
 .footer .bottom-footer {
   margin-top: 5em;
 }
-/* line 211, ../scss/style.scss */
+/* line 230, ../scss/style.scss */
 .footer .bottom-footer p {
   text-align: center;
   color: #4a4f55;

@@ -13,6 +13,28 @@
 		}
 	}
 	#carousel-home-page {
+		.carousel-caption {
+			.caption-wrapper {
+				.caption-inner {
+					padding: 0;
+					.line {
+						width: 28%;
+						margin-top: -5px;
+						display: inline-block !important;
+						border-top: 2px solid white;
+						height: 6px;
+						&.bottom {
+							width: 100%;
+						}
+					}
+					.first-slider-caption {
+						display: inline-block;
+						width: 44%;
+					}
+				}
+			}
+		}
+
 		.carousel-control {
 			.icon-prev {
 				height: 45px !important;
