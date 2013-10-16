@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
 /******************************************************************
 Site Name: MacTown
@@ -150,61 +151,61 @@ you can use the generic selector below, but it's slower:
     height: 45px !important;
   }
 }
-/* line 18, ../scss/style.scss */
+/* line 19, ../scss/style.scss */
 body {
   padding-top: 62px;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
-/* line 24, ../scss/style.scss */
+/* line 25, ../scss/style.scss */
 .clear {
   clear: both;
 }
 
-/* line 28, ../scss/style.scss */
+/* line 29, ../scss/style.scss */
 .row {
   margin-left: 0px;
   margin-right: 0px;
 }
 
-/* line 35, ../scss/style.scss */
+/* line 36, ../scss/style.scss */
 .navbar-collapse .navbar-nav.navbar-right:last-child {
   margin-right: 0px;
 }
 
-/* line 41, ../scss/style.scss */
+/* line 42, ../scss/style.scss */
 .navbar-inverse {
   background-color: #25292c;
 }
-/* line 43, ../scss/style.scss */
+/* line 44, ../scss/style.scss */
 .navbar-inverse .navbar-brand {
   padding: 5px 10px;
 }
-/* line 45, ../scss/style.scss */
+/* line 46, ../scss/style.scss */
 .navbar-inverse .navbar-brand img {
   width: 120px;
 }
-/* line 49, ../scss/style.scss */
+/* line 50, ../scss/style.scss */
 .navbar-inverse .navbar-nav {
   margin-top: 7px;
 }
-/* line 52, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 .navbar-inverse .navbar-nav li a {
   text-transform: uppercase;
   font-weight: 400;
   margin-right: 8px;
 }
-/* line 59, ../scss/style.scss */
+/* line 60, ../scss/style.scss */
 .navbar-inverse .navbar-toggle {
   margin-top: 14px;
 }
 
-/* line 65, ../scss/style.scss */
+/* line 66, ../scss/style.scss */
 #carousel-home-page img {
   width: 100%;
 }
-/* line 68, ../scss/style.scss */
+/* line 69, ../scss/style.scss */
 #carousel-home-page .carousel-caption {
   width: 100%;
   height: 100%;
@@ -214,24 +215,24 @@ body {
   bottom: initial;
   left: initial;
 }
-/* line 76, ../scss/style.scss */
+/* line 77, ../scss/style.scss */
 #carousel-home-page .carousel-caption .caption-wrapper {
   width: 100%;
   height: 100%;
   min-height: 100%;
   display: table;
 }
-/* line 81, ../scss/style.scss */
+/* line 82, ../scss/style.scss */
 #carousel-home-page .carousel-caption .caption-wrapper .caption-inner {
   display: table-cell;
   vertical-align: middle;
   padding: 0 10%;
 }
-/* line 85, ../scss/style.scss */
+/* line 86, ../scss/style.scss */
 #carousel-home-page .carousel-caption .caption-wrapper .caption-inner .line {
   display: none;
 }
-/* line 88, ../scss/style.scss */
+/* line 89, ../scss/style.scss */
 #carousel-home-page .carousel-caption .caption-wrapper .caption-inner .first-slider-caption {
   text-transform: uppercase;
   font-weight: 100;
@@ -242,30 +243,30 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 98, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 #carousel-home-page .carousel-caption .caption-wrapper .caption-inner .second-slider-caption {
   text-transform: uppercase;
   font-size: 2em;
 }
-/* line 106, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 #carousel-home-page .carousel-control.left, #carousel-home-page .carousel-control.right {
   background-image: none;
   background-repeat: no-repeat;
 }
-/* line 110, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 #carousel-home-page .carousel-control .icon-prev {
   background-color: black;
   height: 30px;
   left: 10px;
 }
-/* line 115, ../scss/style.scss */
+/* line 116, ../scss/style.scss */
 #carousel-home-page .carousel-control .icon-next {
   background-color: black;
   height: 30px;
   left: auto;
   right: 0px;
 }
-/* line 123, ../scss/style.scss */
+/* line 124, ../scss/style.scss */
 #carousel-home-page .carousel-indicators li {
   border-radius: 0px;
   width: 30px;
@@ -274,7 +275,7 @@ body {
   border: none;
   opacity: 0.5;
 }
-/* line 130, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 #carousel-home-page .carousel-indicators li.active {
   background-color: #00cae9;
   opacity: 1.0;
@@ -282,17 +283,17 @@ body {
   margin: 1px;
 }
 
-/* line 140, ../scss/style.scss */
+/* line 141, ../scss/style.scss */
 .with-gray-bg {
   background-color: #f3f3f3;
 }
 
-/* line 144, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 .with-padding {
   padding: 5em;
 }
 
-/* line 148, ../scss/style.scss */
+/* line 149, ../scss/style.scss */
 .lighter {
   color: #818181;
   font-size: 1.25em;
@@ -300,11 +301,11 @@ body {
   margin-top: 0.55em;
 }
 
-/* line 155, ../scss/style.scss */
+/* line 156, ../scss/style.scss */
 .block-header {
   margin-bottom: 1.5em;
 }
-/* line 157, ../scss/style.scss */
+/* line 158, ../scss/style.scss */
 .block-header h2 {
   text-transform: uppercase;
   text-align: center;
@@ -314,82 +315,82 @@ body {
   padding: 0;
   color: #2f353e;
 }
-/* line 165, ../scss/style.scss */
+/* line 166, ../scss/style.scss */
 .block-header h2:last-child {
   font-size: 3.55em;
 }
 
-/* line 171, ../scss/style.scss */
+/* line 172, ../scss/style.scss */
 .footer {
   background-color: #25292c;
   padding: 2em;
   color: #7f8691;
 }
-/* line 175, ../scss/style.scss */
+/* line 176, ../scss/style.scss */
 .footer .footer-logo {
   width: 120px;
   margin-bottom: 1em;
 }
-/* line 179, ../scss/style.scss */
+/* line 180, ../scss/style.scss */
 .footer h2 {
   color: white;
   font-size: 1.5em;
   font-weight: 400;
   margin-top: 1.5em;
 }
-/* line 185, ../scss/style.scss */
+/* line 186, ../scss/style.scss */
 .footer p {
   margin-bottom: 4px;
   font-size: 0.9em;
 }
-/* line 190, ../scss/style.scss */
+/* line 191, ../scss/style.scss */
 .footer .footer-social-icons ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 194, ../scss/style.scss */
+/* line 195, ../scss/style.scss */
 .footer .footer-social-icons ul li {
   display: inline-block;
   margin-right: 1em;
 }
-/* line 197, ../scss/style.scss */
+/* line 198, ../scss/style.scss */
 .footer .footer-social-icons ul li a {
   color: #666d75;
   font-size: 2em;
   text-decoration: none;
 }
-/* line 201, ../scss/style.scss */
+/* line 202, ../scss/style.scss */
 .footer .footer-social-icons ul li a:hover {
   color: white;
 }
-/* line 209, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
 .footer .footer-support-icons ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   float: right;
 }
-/* line 214, ../scss/style.scss */
+/* line 215, ../scss/style.scss */
 .footer .footer-support-icons ul li {
   display: inline-block;
   margin-left: 1em;
 }
-/* line 217, ../scss/style.scss */
+/* line 218, ../scss/style.scss */
 .footer .footer-support-icons ul li a {
   color: #666d75;
   font-size: 2em;
   text-decoration: none;
 }
-/* line 221, ../scss/style.scss */
+/* line 222, ../scss/style.scss */
 .footer .footer-support-icons ul li a:hover {
   color: white;
 }
-/* line 228, ../scss/style.scss */
+/* line 229, ../scss/style.scss */
 .footer .bottom-footer {
   margin-top: 5em;
 }
-/* line 230, ../scss/style.scss */
+/* line 231, ../scss/style.scss */
 .footer .bottom-footer p {
   text-align: center;
   color: #4a4f55;
