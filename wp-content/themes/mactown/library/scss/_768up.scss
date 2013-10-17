@@ -36,6 +36,20 @@
 		}
 
 		.carousel-control {
+			width: 3%;
+			.icon-prev {
+				height: 45px !important;
+				left: 15px !important;
+			}
+			.icon-next {
+				height: 45px !important;
+			}
+		}
+	}
+
+	#carousel-team {
+		.carousel-control {
+			width: 3%;
 			.icon-prev {
 				height: 45px !important;
 				left: 15px !important;

@@ -12,19 +12,20 @@ slow the page load.
 // IE8 ployfill for GetComputed Style (for Responsive Script below)
 if (!window.getComputedStyle) {
     window.getComputedStyle = function(el, pseudo) {
+        this.pseudo = pseudo;
         this.el = el;
         this.getPropertyValue = function(prop) {
             var re = /(\-([a-z]){1})/g;
-            if (prop == 'float') prop = 'styleFloat';
+            if (prop === 'float') { prop = 'styleFloat'; }
             if (re.test(prop)) {
                 prop = prop.replace(re, function () {
                     return arguments[2].toUpperCase();
                 });
             }
             return el.currentStyle[prop] ? el.currentStyle[prop] : null;
-        }
+        };
         return this;
-    }
+    };
 }
 
 // as the page loads, call these scripts
@@ -67,7 +68,19 @@ jQuery(document).ready(function($) {
     
 	
 	// add all your scripts here
-	
+	$("#meet-the-team-button").on('click', function(event) {
+        event.preventDefault();
+        $("#meet-the-team-section").animate({ height: "toggle" });
+    });
+
+    $("#meet-the-team-close").on('click', function(event) {
+        event.preventDefault();
+        $("#meet-the-team-section").animate({ height: "toggle" });
+    });
+
+    $(".team-member img").on('hover', function() {
+        $(this).css({ opacity: 0.4 });
+    });
  
 }); /* end of as page load scripts */
 

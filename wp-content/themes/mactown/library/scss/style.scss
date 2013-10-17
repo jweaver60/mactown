@@ -104,6 +104,7 @@ body {
 		}
 	}
 	.carousel-control {
+		z-index: 9999;
 		&.left, &.right {
 			background-image: none;
 			background-repeat: no-repeat;
@@ -138,12 +139,37 @@ body {
 	}
 }
 
+#carousel-team {
+	.carousel-control {
+		z-index: 9999;
+		&.left, &.right {
+			background-image: none;
+			background-repeat: no-repeat;
+		}
+		.icon-prev {
+			background-color: black;
+			height: 30px;
+			left: 10px;
+		}
+		.icon-next {
+			background-color: black;
+			height: 30px;
+			left: auto;
+			right: 0px;
+		}
+	}
+}
+
 .with-gray-bg {
 	background-color: $gray-bg-color;
 }
 
 .with-padding {
 	padding: 5em;
+	&.no-vertical-padding {
+		padding-bottom: 0;
+		padding-top: 0; 
+	}
 }
 
 .lighter {
@@ -236,4 +262,168 @@ body {
 	}
 }
 
+.section-title {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4em;
+	color: $almost-black;
+}
 
+.section-small-title {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 3em;
+	color: $almost-black;
+}
+
+.section-subtitle {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	color: $light-gray;
+	font-size: 1.45em;
+}
+
+.section-featured-image {
+	margin: 2em 0;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.section-content {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 1.15em;
+	color: $quote-citation;
+	line-height: 1.5em;
+}
+
+hr.short {
+	width: 70px;
+	height: 4px;
+	color: $darker-gray;
+	background-color: $darker-gray;
+}
+
+blockquote {
+	border-left: solid 7px $quote-border;
+	p {
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-weight: 600;
+		color: $quote;
+		font-size: 1.75em;
+	}
+	cite {
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-weight: 100;
+		color: $quote-citation;
+		font-size: 1.25em;
+	}
+}
+
+.btn {
+	border-radius: 0px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	border: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	&.btn-primary {
+		background-color: $btn-normal;
+		&:hover {
+			background-color: $btn-hover;
+		}
+	}
+}
+
+.team-member {
+	display: block;
+	margin: 0 auto;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	div.team-bio {
+		position: absolute;
+		top: 0;	
+		padding: 1.5em;
+		background: black;
+		opacity: 0.4;
+		p {
+			color: white;
+		}
+	}
+	.team-info {
+		background: white;
+		border: solid 1px $border-color;
+		padding: 1em;
+		h3 {
+			text-align: center;
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			font-size: 1.35em;
+			font-weight: 700;
+			color: $almost-black;
+		}
+		p {
+			text-align: center;
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			font-weight: 400;
+			font-size: 1em;
+			color: $team-blue;
+			&.team-social-links {
+				a {
+					color: $dark-gray;
+					font-size: 2em;
+					margin-right: 1em;
+					&:last-child {
+						margin-right: 0;
+					}
+					&:hover {
+						color: $team-blue;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.close-icon {
+	float: right;
+	padding: 1em 2em 0 0;
+	color: $dark-gray;
+	font-size: 2em;
+	&:hover {
+		text-decoration: none;
+		color: $team-blue;
+	}
+}
+
+#meet-the-team-section {
+	display: none;
+}
+
+#partners-row {
+	background: url(../images/partners_bg.png) no-repeat;
+	background-size: cover;
+	h1.section-title {
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-weight: 100;
+		color: white;
+		font-size: 3em;
+	}
+	p.section-content {
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-size: 1.15em;
+		color: white;
+		font-weight: 300;
+		text-align: center;
+	}
+}
