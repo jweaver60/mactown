@@ -131,11 +131,20 @@ function bones_scripts_and_styles() {
     // bootstrap 3.0.0 JS
     wp_register_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/library/js/libs/bootstrap.min.js', array( 'jquery' ), '3.0.0', false);
 
+    // OWL Slider carousel JS
+    wp_register_script( 'owl-carousel-js', get_stylesheet_directory_uri(). '/library/js/libs/owl.carousel.min.js', array('jquery'), '1.0.0', false );
+
     // bootstrap 3.0.0 CSS
-    wp_register_style( 'bootstrap-css', get_stylesheet_directory_uri(). '/library/css/bootstrap.min.css', array(), '3.0.0', 'all');
+    wp_register_style( 'bootstrap-css', get_stylesheet_directory_uri(). '/library/css/bootstrap.min.css', array(), '3.0.0', 'all' );
 
     // fontawesome
-    wp_register_style('fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '3.2.1', 'all');
+    wp_register_style( 'fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array(), '3.2.1', 'all' );
+
+    // OWL Slider carousel
+    wp_register_style( 'owl-carousel', get_stylesheet_directory_uri(). '/library/css/owl.carousel.css', array(), '1.0.0', 'all' );
+
+    // OWL Slider theme
+    wp_register_style( 'owl-carousel-theme', get_stylesheet_directory_uri(). '/library/css/owl.theme.css', array(), '1.0.0', 'all' );
 
     // register main stylesheet
     wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
@@ -159,8 +168,11 @@ function bones_scripts_and_styles() {
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );
     wp_enqueue_script( 'bootstrap-js' );
+    wp_enqueue_script( 'owl-carousel-js' );
     wp_enqueue_style( 'bootstrap-css' );
     wp_enqueue_style( 'fontawesome' );
+    wp_enqueue_style( 'owl-carousel' );
+    wp_enqueue_style( 'owl-carousel-theme' );
     wp_enqueue_style( 'bones-stylesheet' );
 
     /*

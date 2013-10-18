@@ -78,8 +78,17 @@ jQuery(document).ready(function($) {
         $("#meet-the-team-section").animate({ height: "toggle" });
     });
 
-    $(".team-member img").on('hover', function() {
-        $(this).css({ opacity: 0.4 });
+    $(".team-photo").hover(function() {
+        $(this).children().show();
+    }, function() {
+        $(this).children().hide();
+    });
+
+    $("#team-carousel").owlCarousel({
+        items: 4,
+        navigation: true,
+        navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
+        pagination: false
     });
  
 }); /* end of as page load scripts */

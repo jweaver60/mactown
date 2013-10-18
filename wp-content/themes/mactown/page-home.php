@@ -87,35 +87,33 @@ Template Name: Home Page
 				<h2 class="section-small-title"><?php echo $our_team_page->post_title; ?></h2>
 				<p class="section-content"><?php echo $our_team_page->post_content; ?></p>
 		</div>
-		<div id="carousel-team" class="carousel slide">
-				<div class="row with-padding">
-					<?php 
-						$args = array( 'post_type' => 'team_members' );
-						$team_loop = new WP_Query( $args );
-						while ( $team_loop->have_posts() ) : $team_loop->the_post();
-					?>
-						<div class="col-xs-12 col-sm-3 team-member">
-							<?php the_post_thumbnail('full'); ?>
+		<div class="row with-padding no-horizontal-padding">
+			<div class="owl-carousel" id="team-carousel">
+				<?php 
+					$args = array( 'post_type' => 'team_members' );
+					$team_loop = new WP_Query( $args );
+					while ( $team_loop->have_posts() ) : $team_loop->the_post();
+				?>
+					<div class="team-member">
+						<?php 
+							$post_ID = get_the_ID();
+							$url = wp_get_attachment_url(get_post_thumbnail_id($post_ID));
+						?>
+						<div class="team-photo" style="background-image: url('<?php echo $url; ?>');">
 							<div class="team-bio"><?php the_content(); ?></div>
-							<div class="team-info">
-								<h3><?php echo the_title(); ?></h3>
-								<p><?php the_field('team_member_title'); ?></p>
-								<p class="team-social-links">
-									<a href="#"><i class="icon-linkedin"></i></a>
-									<a href="#"><i class="icon-twitter"></i></a>
-									<a href="#"><i class="icon-facebook"></i></a>
-								</p>
-							</div>
 						</div>
-					<?php endwhile; ?>
-				</div>
-				<!-- Controls -->
-			  <a class="left carousel-control" href="#carousel-home-page" data-slide="prev">
-			    <span class="icon-prev"></span>
-			  </a>
-			  <a class="right carousel-control" href="#carousel-home-page" data-slide="next">
-			    <span class="icon-next"></span>
-			  </a>
+						<div class="team-info">
+							<h3><?php echo the_title(); ?></h3>
+							<p><?php the_field('team_member_title'); ?></p>
+							<p class="team-social-links">
+								<a href="#"><i class="icon-linkedin"></i></a>
+								<a href="#"><i class="icon-twitter"></i></a>
+								<a href="#"><i class="icon-facebook"></i></a>
+							</p>
+						</div>
+					</div>
+				<?php endwhile; ?>		
+			</div>
 		</div>
 	</div>
 

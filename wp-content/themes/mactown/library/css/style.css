@@ -168,6 +168,21 @@ you can use the generic selector below, but it's slower:
   #carousel-team .carousel-control .icon-next {
     height: 45px !important;
   }
+
+  /* line 63, ../scss/_768up.scss */
+  .with-padding {
+    padding: 5em !important;
+  }
+  /* line 65, ../scss/_768up.scss */
+  .with-padding.no-vertical-padding {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+  /* line 69, ../scss/_768up.scss */
+  .with-padding.no-horizontal-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 /* line 19, ../scss/style.scss */
 body {
@@ -335,15 +350,20 @@ body {
 
 /* line 167, ../scss/style.scss */
 .with-padding {
-  padding: 5em;
+  padding: 2em;
 }
 /* line 169, ../scss/style.scss */
 .with-padding.no-vertical-padding {
   padding-bottom: 0;
   padding-top: 0;
 }
+/* line 173, ../scss/style.scss */
+.with-padding.no-horizontal-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
 
-/* line 175, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .lighter {
   color: #818181;
   font-size: 1.25em;
@@ -351,11 +371,11 @@ body {
   margin-top: 0.55em;
 }
 
-/* line 182, ../scss/style.scss */
+/* line 186, ../scss/style.scss */
 .block-header {
   margin-bottom: 1.5em;
 }
-/* line 184, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 .block-header h2 {
   text-transform: uppercase;
   text-align: center;
@@ -365,89 +385,89 @@ body {
   padding: 0;
   color: #2f353e;
 }
-/* line 192, ../scss/style.scss */
+/* line 196, ../scss/style.scss */
 .block-header h2:last-child {
   font-size: 3.55em;
 }
 
-/* line 198, ../scss/style.scss */
+/* line 202, ../scss/style.scss */
 .footer {
   background-color: #25292c;
   padding: 2em;
   color: #7f8691;
 }
-/* line 202, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .footer .footer-logo {
   width: 120px;
   margin-bottom: 1em;
 }
-/* line 206, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
 .footer h2 {
   color: white;
   font-size: 1.5em;
   font-weight: 400;
   margin-top: 1.5em;
 }
-/* line 212, ../scss/style.scss */
+/* line 216, ../scss/style.scss */
 .footer p {
   margin-bottom: 4px;
   font-size: 0.9em;
 }
-/* line 217, ../scss/style.scss */
+/* line 221, ../scss/style.scss */
 .footer .footer-social-icons ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 221, ../scss/style.scss */
+/* line 225, ../scss/style.scss */
 .footer .footer-social-icons ul li {
   display: inline-block;
   margin-right: 1em;
 }
-/* line 224, ../scss/style.scss */
+/* line 228, ../scss/style.scss */
 .footer .footer-social-icons ul li a {
   color: #666d75;
   font-size: 2em;
   text-decoration: none;
 }
-/* line 228, ../scss/style.scss */
+/* line 232, ../scss/style.scss */
 .footer .footer-social-icons ul li a:hover {
   color: white;
 }
-/* line 236, ../scss/style.scss */
+/* line 240, ../scss/style.scss */
 .footer .footer-support-icons ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   float: right;
 }
-/* line 241, ../scss/style.scss */
+/* line 245, ../scss/style.scss */
 .footer .footer-support-icons ul li {
   display: inline-block;
   margin-left: 1em;
 }
-/* line 244, ../scss/style.scss */
+/* line 248, ../scss/style.scss */
 .footer .footer-support-icons ul li a {
   color: #666d75;
   font-size: 2em;
   text-decoration: none;
 }
-/* line 248, ../scss/style.scss */
+/* line 252, ../scss/style.scss */
 .footer .footer-support-icons ul li a:hover {
   color: white;
 }
-/* line 255, ../scss/style.scss */
+/* line 259, ../scss/style.scss */
 .footer .bottom-footer {
   margin-top: 5em;
 }
-/* line 257, ../scss/style.scss */
+/* line 261, ../scss/style.scss */
 .footer .bottom-footer p {
   text-align: center;
   color: #4a4f55;
   font-size: 0.85em;
 }
 
-/* line 265, ../scss/style.scss */
+/* line 269, ../scss/style.scss */
 .section-title {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -457,7 +477,7 @@ body {
   color: #2f353e;
 }
 
-/* line 274, ../scss/style.scss */
+/* line 278, ../scss/style.scss */
 .section-small-title {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -467,7 +487,7 @@ body {
   color: #2f353e;
 }
 
-/* line 283, ../scss/style.scss */
+/* line 287, ../scss/style.scss */
 .section-subtitle {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -477,17 +497,17 @@ body {
   font-size: 1.45em;
 }
 
-/* line 292, ../scss/style.scss */
+/* line 296, ../scss/style.scss */
 .section-featured-image {
   margin: 2em 0;
 }
-/* line 294, ../scss/style.scss */
+/* line 298, ../scss/style.scss */
 .section-featured-image img {
   width: 100%;
   height: auto;
 }
 
-/* line 300, ../scss/style.scss */
+/* line 304, ../scss/style.scss */
 .section-content {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -496,7 +516,7 @@ body {
   line-height: 1.5em;
 }
 
-/* line 308, ../scss/style.scss */
+/* line 312, ../scss/style.scss */
 hr.short {
   width: 70px;
   height: 4px;
@@ -504,18 +524,18 @@ hr.short {
   background-color: #b7b7b7;
 }
 
-/* line 315, ../scss/style.scss */
+/* line 319, ../scss/style.scss */
 blockquote {
   border-left: solid 7px #3d3d3d;
 }
-/* line 317, ../scss/style.scss */
+/* line 321, ../scss/style.scss */
 blockquote p {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 600;
   color: #818894;
   font-size: 1.75em;
 }
-/* line 323, ../scss/style.scss */
+/* line 327, ../scss/style.scss */
 blockquote cite {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 100;
@@ -523,7 +543,7 @@ blockquote cite {
   font-size: 1.25em;
 }
 
-/* line 331, ../scss/style.scss */
+/* line 335, ../scss/style.scss */
 .btn {
   border-radius: 0px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -532,44 +552,51 @@ blockquote cite {
   padding: 10px 20px;
   font-size: 18px;
 }
-/* line 338, ../scss/style.scss */
+/* line 342, ../scss/style.scss */
 .btn.btn-primary {
   background-color: #00cae9;
 }
-/* line 340, ../scss/style.scss */
+/* line 344, ../scss/style.scss */
 .btn.btn-primary:hover {
   background-color: #11cbea;
 }
 
-/* line 346, ../scss/style.scss */
+/* line 350, ../scss/style.scss */
 .team-member {
   display: block;
-  margin: 0 auto;
-}
-/* line 349, ../scss/style.scss */
-.team-member img {
-  width: 100%;
-  height: auto;
+  margin: 0 2em 2em;
 }
 /* line 353, ../scss/style.scss */
-.team-member div.team-bio {
+.team-member .team-photo {
+  background-size: cover;
+  background-position: center center;
+  min-height: 394px;
+  height: inherit;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+/* line 361, ../scss/style.scss */
+.team-member .team-photo div.team-bio {
+  display: none;
   position: absolute;
   top: 0;
   padding: 1.5em;
-  background: black;
-  opacity: 0.4;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
 }
-/* line 359, ../scss/style.scss */
-.team-member div.team-bio p {
+/* line 369, ../scss/style.scss */
+.team-member .team-photo div.team-bio p {
   color: white;
 }
-/* line 363, ../scss/style.scss */
+/* line 375, ../scss/style.scss */
 .team-member .team-info {
   background: white;
   border: solid 1px #e1e1e1;
   padding: 1em;
 }
-/* line 367, ../scss/style.scss */
+/* line 379, ../scss/style.scss */
 .team-member .team-info h3 {
   text-align: center;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -577,7 +604,7 @@ blockquote cite {
   font-weight: 700;
   color: #2f353e;
 }
-/* line 374, ../scss/style.scss */
+/* line 386, ../scss/style.scss */
 .team-member .team-info p {
   text-align: center;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -585,53 +612,53 @@ blockquote cite {
   font-size: 1em;
   color: #11cbea;
 }
-/* line 381, ../scss/style.scss */
+/* line 393, ../scss/style.scss */
 .team-member .team-info p.team-social-links a {
   color: #818181;
   font-size: 2em;
   margin-right: 1em;
 }
-/* line 385, ../scss/style.scss */
+/* line 397, ../scss/style.scss */
 .team-member .team-info p.team-social-links a:last-child {
   margin-right: 0;
 }
-/* line 388, ../scss/style.scss */
+/* line 400, ../scss/style.scss */
 .team-member .team-info p.team-social-links a:hover {
   color: #11cbea;
   text-decoration: none;
 }
 
-/* line 398, ../scss/style.scss */
+/* line 410, ../scss/style.scss */
 .close-icon {
   float: right;
   padding: 1em 2em 0 0;
   color: #818181;
   font-size: 2em;
 }
-/* line 403, ../scss/style.scss */
+/* line 415, ../scss/style.scss */
 .close-icon:hover {
   text-decoration: none;
   color: #11cbea;
 }
 
-/* line 409, ../scss/style.scss */
+/* line 421, ../scss/style.scss */
 #meet-the-team-section {
   display: none;
 }
 
-/* line 413, ../scss/style.scss */
+/* line 425, ../scss/style.scss */
 #partners-row {
   background: url(../images/partners_bg.png) no-repeat;
   background-size: cover;
 }
-/* line 416, ../scss/style.scss */
+/* line 428, ../scss/style.scss */
 #partners-row h1.section-title {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 100;
   color: white;
   font-size: 3em;
 }
-/* line 422, ../scss/style.scss */
+/* line 434, ../scss/style.scss */
 #partners-row p.section-content {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 1.15em;

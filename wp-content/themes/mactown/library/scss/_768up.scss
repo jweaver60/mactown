@@ -59,4 +59,16 @@
 			}
 		}
 	}
+
+	.with-padding {
+		padding: 5em !important;
+		&.no-vertical-padding {
+			padding-bottom: 0 !important;
+			padding-top: 0 !important;  
+		}
+		&.no-horizontal-padding {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
 }

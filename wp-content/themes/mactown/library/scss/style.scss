@@ -165,10 +165,14 @@ body {
 }
 
 .with-padding {
-	padding: 5em;
+	padding: 2em;
 	&.no-vertical-padding {
 		padding-bottom: 0;
-		padding-top: 0; 
+		padding-top: 0;
+	}
+	&.no-horizontal-padding {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -345,21 +349,29 @@ blockquote {
 
 .team-member {
 	display: block;
-	margin: 0 auto;
-	img {
-		width: 100%;
-		height: auto;
-	}
-	div.team-bio {
-		position: absolute;
-		top: 0;	
-		padding: 1.5em;
-		background: black;
-		opacity: 0.4;
-		p {
-			color: white;
+	margin: 0 2em 2em;
+	.team-photo {
+		background-size: cover;
+		background-position: center center;
+		min-height: 394px;
+		height: inherit;
+		display: block;
+		position: relative;
+		cursor: pointer;
+		div.team-bio {
+			display: none;
+			position: absolute;
+			top: 0;	
+			padding: 1.5em;
+			background-color: rgba(0,0,0,0.8);
+			width: 100%;
+			height: 100%;
+			p {
+				color: white;
+			}
 		}
 	}
+
 	.team-info {
 		background: white;
 		border: solid 1px $border-color;
