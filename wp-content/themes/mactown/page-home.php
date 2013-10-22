@@ -118,14 +118,30 @@ Template Name: Home Page
 	</div>
 
 	<!-- Partners Posts Slider -->
-	<div class="row with-padding" id="partners-row">
+	<div class="row with-padding no-horizontal-padding" id="partners-row">
 		<?php $partners_page = get_post(40); ?>
-		<h1 class="section-title"><?php echo $partners_page->post_title; ?></h1>
-		<p class="section-content"><?php echo $partners_page->post_content; ?></p>
+		<div class="extra-padding">
+			<h1 class="section-title"><?php echo $partners_page->post_title; ?></h1>
+			<p class="section-content"><?php echo $partners_page->post_content; ?></p>
+		</div>
+		<div class="owl-carousel" id="partners-carousel">
+			<?php 
+				$partner_args = array( 'post_type' => 'partner' );
+				$partner_loop = new WP_Query( $partner_args );
+				while ( $partner_loop->have_posts() ) : $partner_loop->the_post();
+			?>
+				<div class="partner-section">
+					<a href="<?php the_field('partner_link'); ?>" target="_blank">
+						<?php the_post_thumbnail('full'); ?>
+					</a>
+					<?php the_content(); ?>
+				</div>
+			<?php endwhile; ?>
+		</div>
 	</div>
 
-	<!-- Services Page Content -->
-	<div class="row with-padding with-gray-bg">
+	<!-- Services Page Content (top) -->
+	<div class="row with-padding small-bottom-padding with-gray-bg">
 		<?php $services_page = get_post(46); ?>
 			<h1 class="section-title"><?php echo $services_page->post_title; ?></h1>
 			<h4 class="section-subtitle"><?php the_field('services_subtitle', 46); ?></h4>
@@ -141,6 +157,186 @@ Template Name: Home Page
 			</div>
 	</div>
 
+	<!-- Apple Specialist Page Content (middle) -->
+	<div class="row with-padding no-top-padding services-main-content" id="apple-specialist-content">
+		<div class="row">
+			<a class="close-icon" id="apple-specialist-close" href="#"><i class="icon-remove"></i></a>
+		</div>
+		<?php $apple_specialist_page = get_post(67); ?>
+		<div class="col-xs-12 col-sm-8">
+			<?php echo $apple_specialist_page->post_content; ?>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<?php echo get_the_post_thumbnail(67, 'full'); ?>
+		</div>
+	</div>
 
+	<!-- Sessions Page Content (middle) -->
+	<div class="row with-padding no-top-padding services-main-content" id="sessions-content">
+		<div class="row">
+			<a href="#" class="close-icon" id="sessions-close"><i class="icon-remove"></i></a>
+		</div>
+		<?php $sessions_page = get_post(70); ?>
+		<div class="col-xs-12 col-sm-8">
+			<?php echo $sessions_page->post_content; ?>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<?php echo get_the_post_thumbnail(70, 'full'); ?>
+		</div>
+	</div>
+
+	<!-- Business Solutions Page Content (middle) -->
+	<div class="row with-padding no-top-padding services-main-content" id="business-solutions-content">
+		<div class="row">
+			<a href="#" class="close-icon" id="business-solutions-close"><i class="icon-remove"></i></a>
+		</div>
+		<?php $business_solutions_page = get_post(72); ?>
+		<div class="col-xs-12 col-sm-8">
+			<?php echo $business_solutions_page->post_content; ?>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<?php echo get_the_post_thumbnail(72, 'full'); ?>
+		</div>
+	</div>
+
+	<!-- Service Page Content (middle) -->
+	<div class="row with-padding no-top-padding services-main-content" id="service-content">
+		<div class="row">
+			<a href="#" class="close-icon" id="service-close"><i class="icon-remove"></i></a>
+		</div>
+		<?php $service_page = get_post(74); ?>
+		<div class="col-xs-12 col-sm-8">
+			<?php echo $service_page->post_content; ?>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<?php echo get_the_post_thumbnail(74, 'full'); ?>
+		</div>
+	</div>
+
+	<!-- Services Page Content (bottom) -->
+	<div class="row with-padding small-top-padding with-gray-bg" id="services-offered">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 services-cell">
+				<a href="#" class="services-title" id="specialist-link">
+					<i class="icon-apple"></i>
+					<h3><?php echo $apple_specialist_page->post_title; ?></h3>
+				</a>
+				<p>
+					<?php the_field('services_section_summary', 67); ?>
+				</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 services-cell">
+				<a href="#" class="services-title" id="sessions-link">
+					<i class="rdm-sessions"></i>
+					<h3><?php echo $sessions_page->post_title; ?></h3>
+				</a>
+				<p>
+					<?php the_field('services_section_summary', 70); ?>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 services-cell">
+				<a href="#" class="services-title" id="business-solutions-link">
+					<i class="rdm-service"></i>
+					<h3><?php echo $business_solutions_page->post_title; ?></h3>
+				</a>
+				<p>
+					<?php the_field('services_section_summary', 72); ?>
+				</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 services-cell">
+				<a href="#" class="services-title" id="service-link">
+					<i class="rdm-medkit"></i>
+					<h3><?php echo $service_page->post_title; ?></h3>
+				</a>
+				<p>
+					<?php the_field('services_section_summary', 74); ?>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Testimonials Slider -->
+	<div class="row with-padding no-horizontal-padding" id="testimonials-row">
+		<?php $testimonials_page = get_post(89); ?>
+		<div class="extra-padding">
+			<h1 class="section-title"><?php echo $testimonials_page->post_title; ?></h1>
+			<p class="section-content"><?php echo $testimonials_page->post_content; ?></p>
+		</div>
+		<div class="owl-carousel" id="testimonials-carousel">
+			<?php 
+				$testimonial_args = array( 'post_type' => 'testimonial' );
+				$testimonial_loop = new WP_Query( $testimonial_args );
+				while ( $testimonial_loop->have_posts() ) : $testimonial_loop->the_post();
+			?>
+				<div class="testimonial-section">
+					<?php $service_used = get_field('customer_service'); ?>
+					<div class="testimonial-icon">
+						<?php if ($service_used === 'Business Solutions Customer') {
+							echo "<i class='rdm-service'></i>";
+						} elseif ($service_used === 'Sessions Customer') {
+							echo "<i class='rdm-sessions'></i>";
+						} else {
+							echo "<i class='rdm-medkit'></i>";
+						} ?>
+					</div>
+					<div class="quote">
+						<?php the_content(); ?>
+					</div>
+					<div class="customer-info">
+						<p>- <?php the_field('customer_name'); ?>, <?php echo $service_used; ?> <?php echo get_avatar(get_field('customer_email'), 42); ?></p>
+					</div>
+				</div>
+			<?php endwhile; ?>
+		</div>
+	</div>
+
+	<!-- Blog Page Section -->
+	<div class="row with-padding with-gray-bg">
+		<?php $blog_page = get_post(7); ?>
+		<h1 class="section-title"><?php echo $blog_page->post_title; ?></h1>
+		<h4 class="section-subtitle"><?php the_field('trending_subtitle', 7); ?></h4>
+		<hr class="short" />
+		<div class="row">
+			<?php
+				$trending_args = array( 'post_type' => 'post', 'post_per_page' => 3);
+				$trending_loop = new WP_Query( $trending_args );
+				while ( $trending_loop->have_posts() ) : $trending_loop->the_post();
+			?>
+				<div class="col-xs-12 col-sm-4 trending-post">
+					<div class="featured-image">
+						<?php the_post_thumbnail('full'); ?>
+					</div>
+					<div class="author-avatar">
+						<?php echo get_avatar(get_the_author_meta('ID'), 50); ?>
+					</div>
+					<div class="trending-content">
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+						<?php the_excerpt(); ?>
+					</div>
+					<div class="trending-meta">
+						<div class="row">
+							<div class="col-xs-6">
+								<span class='meta-section'>
+									<i class='icon-calendar'></i> <?php the_date(); ?>
+								</span>
+							</div>
+							<div class="col-xs-3">
+								<span class="meta-section">
+									<i class="icon-comment"></i> <?php comments_number('0', '1', '%'); ?>
+								</span>
+							</div>
+							<div class="col-xs-3">
+								<span class="meta-section">
+									<i class="icon-plus-sign-alt"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; ?>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

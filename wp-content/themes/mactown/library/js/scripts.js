@@ -84,8 +84,98 @@ jQuery(document).ready(function($) {
         $(this).children().hide();
     });
 
+    $("#specialist-link").on('click', function(event) {
+        event.preventDefault();
+        $("#sessions-link").removeClass('active');
+        $("#business-solutions-link").removeClass('active');
+        $("#service-link").removeClass('active');
+        $("#sessions-content").slideUp();
+        $("#business-solutions-content").slideUp();
+        $("#service-content").slideUp();
+
+        $("#specialist-link").toggleClass('active');
+        $("#apple-specialist-content").animate({ height: 'toggle' });
+    });
+
+    $("#sessions-link").on('click', function(event) {
+        event.preventDefault();
+        $("#specialist-link").removeClass('active');
+        $("#business-solutions-link").removeClass('active');
+        $("#service-link").removeClass('active');
+        $("#apple-specialist-content").slideUp();
+        $("#business-solutions-content").slideUp();
+        $("#service-content").slideUp();
+        
+        $("#sessions-link").toggleClass('active');
+        $("#sessions-content").animate({ height: 'toggle' });
+    });
+
+    $("#business-solutions-link").on('click', function(event) {
+        event.preventDefault();
+        $("#sessions-link").removeClass('active');
+        $("#specialist-link").removeClass('active');
+        $("#service-link").removeClass('active');
+        $("#sessions-content").slideUp();
+        $("#apple-specialist-content").slideUp();
+        $("#service-content").slideUp();
+        
+        $("#business-solutions-link").toggleClass('active');
+        $("#business-solutions-content").animate({ height: 'toggle' });
+    });
+
+    $("#service-link").on('click', function(event) {
+        event.preventDefault();
+        $("#sessions-link").removeClass('active');
+        $("#business-solutions-link").removeClass('active');
+        $("#specialist-link").removeClass('active');
+        $("#sessions-content").slideUp();
+        $("#business-solutions-content").slideUp();
+        $("#apple-specialist-content").slideUp();
+        
+        $("#service-link").toggleClass('active');
+        $("#service-content").animate({ height: 'toggle' });
+    });
+
+    $("#apple-specialist-close").on('click', function(event) {
+        event.preventDefault();
+        $("#specialist-link").removeClass('active');
+        $("#apple-specialist-content").slideUp();
+    });
+
+    $("#sessions-close").on('click', function(event) {
+        event.preventDefault();
+        $("#sessions-link").removeClass('active');
+        $("#sessions-content").slideUp();
+    });
+
+    $("#business-solutions-close").on('click', function(event) {
+        event.preventDefault();
+        $("#business-solutions-link").removeClass('active');
+        $("#business-solutions-content").slideUp();
+    });
+
+    $("#service-close").on('click', function(event) {
+        event.preventDefault();
+        $("#service-link").removeClass('active');
+        $("#service-content").slideUp();
+    });
+
     $("#team-carousel").owlCarousel({
         items: 4,
+        navigation: true,
+        navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
+        pagination: false
+    });
+
+    $("#partners-carousel").owlCarousel({
+        items: 3,
+        navigation: true,
+        navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
+        pagination: false
+    });
+
+    $("#testimonials-carousel").owlCarousel({
+        items: 3,
         navigation: true,
         navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
         pagination: false
