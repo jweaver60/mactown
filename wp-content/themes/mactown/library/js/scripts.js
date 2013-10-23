@@ -180,6 +180,13 @@ jQuery(document).ready(function($) {
         navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
         pagination: false
     });
+
+    $("#updates-carousel").owlCarousel({
+        items: 1,
+        navigation: true,
+        navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
+        pagination: false
+    });
  
 }); /* end of as page load scripts */
 

@@ -339,4 +339,20 @@ Template Name: Home Page
 		</div>
 	</div>
 
+	<!-- Sub-carousel Section -->
+	<div class="row with-padding no-horizontal-padding" id="subcarousel">
+		<div class="owl-carousel" id="updates-carousel">
+			<?php
+				$update_args = array('post_type' => 'update');
+				$update_loop = new WP_Query($update_args);
+				while ($update_loop->have_posts()) : $update_loop->the_post();
+			?>
+				<div class="update-section">
+					<h3><?php the_title(); ?></h3>
+					<?php the_content(); ?>
+				</div>
+			<?php endwhile; ?>
+		</div>
+	</div>
+
 <?php get_footer(); ?>

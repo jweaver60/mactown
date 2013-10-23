@@ -572,6 +572,7 @@ blockquote {
 			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 			font-size: 1.25em;
 			font-weight: 600;
+			margin-left: 3.5em;
 		}
 		.customer-info {
 			p {
@@ -639,6 +640,31 @@ blockquote {
 		}
 		.col-xs-3 {
 			text-align: center;
+		}
+	}
+}
+
+#subcarousel {
+	background: url(../images/subcarousel_bg.png) no-repeat;
+	background-size: cover;
+	.update-section {
+		border: solid 1px white;
+		margin: 0 5em;
+		h3 {
+			text-align: center;
+			text-transform: uppercase;
+			color: white;
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			font-weight: 100;
+			font-size: 2.25em;
+			margin: 1em 2em 1em;
+		}
+		p {
+			color: white;
+			margin: 0 2em 2em;
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			font-size: 1.15em;
+			font-weight: 300;
 		}
 	}
 }

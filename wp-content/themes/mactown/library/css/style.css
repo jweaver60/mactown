@@ -821,79 +821,109 @@ blockquote cite {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 1.25em;
   font-weight: 600;
+  margin-left: 3.5em;
 }
-/* line 577, ../scss/style.scss */
+/* line 578, ../scss/style.scss */
 #testimonials-row .testimonial-section .customer-info p {
   color: white;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 100;
   margin-left: 4em;
 }
-/* line 582, ../scss/style.scss */
+/* line 583, ../scss/style.scss */
 #testimonials-row .testimonial-section .customer-info p img {
   border-radius: 42px;
   margin-left: 1em;
 }
 
-/* line 591, ../scss/style.scss */
+/* line 592, ../scss/style.scss */
 .trending-post {
   margin-bottom: 2em;
 }
-/* line 594, ../scss/style.scss */
+/* line 595, ../scss/style.scss */
 .trending-post .featured-image img {
   width: 100%;
   height: auto;
   z-index: 1;
 }
-/* line 601, ../scss/style.scss */
+/* line 602, ../scss/style.scss */
 .trending-post .author-avatar img {
   border-radius: 50px;
   right: 10px;
   margin: -25px 1em 0 0;
   position: absolute;
 }
-/* line 608, ../scss/style.scss */
+/* line 609, ../scss/style.scss */
 .trending-post .trending-content {
   margin: 1em 1em 0;
   color: #818181;
   font-size: 1.1em;
 }
-/* line 612, ../scss/style.scss */
+/* line 613, ../scss/style.scss */
 .trending-post .trending-content a {
   text-decoration: none;
   color: #11cbea;
 }
-/* line 615, ../scss/style.scss */
+/* line 616, ../scss/style.scss */
 .trending-post .trending-content a h3 {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 1.3em;
   color: #2f353e;
 }
-/* line 621, ../scss/style.scss */
+/* line 622, ../scss/style.scss */
 .trending-post .trending-content a:hover {
   color: #00cae9;
 }
-/* line 623, ../scss/style.scss */
+/* line 624, ../scss/style.scss */
 .trending-post .trending-content a:hover h3 {
   color: #11cbea;
 }
-/* line 629, ../scss/style.scss */
+/* line 630, ../scss/style.scss */
 .trending-post .trending-meta {
   border-top: 1px dashed #818181;
   margin: 1em 0 0;
   padding: 1em 0 0;
   color: #818181;
 }
-/* line 634, ../scss/style.scss */
+/* line 635, ../scss/style.scss */
 .trending-post .trending-meta .col-xs-3:last-child {
   text-align: right;
 }
-/* line 637, ../scss/style.scss */
+/* line 638, ../scss/style.scss */
 .trending-post .trending-meta .col-xs-6:first-child {
   text-align: left;
 }
-/* line 640, ../scss/style.scss */
+/* line 641, ../scss/style.scss */
 .trending-post .trending-meta .col-xs-3 {
   text-align: center;
+}
+
+/* line 647, ../scss/style.scss */
+#subcarousel {
+  background: url(../images/subcarousel_bg.png) no-repeat;
+  background-size: cover;
+}
+/* line 650, ../scss/style.scss */
+#subcarousel .update-section {
+  border: solid 1px white;
+  margin: 0 5em;
+}
+/* line 653, ../scss/style.scss */
+#subcarousel .update-section h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 2.25em;
+  margin: 1em 2em 1em;
+}
+/* line 662, ../scss/style.scss */
+#subcarousel .update-section p {
+  color: white;
+  margin: 0 2em 2em;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.15em;
+  font-weight: 300;
 }
