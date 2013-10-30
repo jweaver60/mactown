@@ -71,4 +71,37 @@
 			padding-right: 0 !important;
 		}
 	}
+	#gform_wrapper_1 {
+		ul {
+			li {
+				input[type=text] {
+					width: 47% !important;
+				}
+			}
+			li:last-child {
+				.ginput_container {
+					float: right;
+					width: 51% !important;
+					margin-top: -212px !important;
+					textarea {
+						height: 186px;
+					}
+				}
+			}
+		}
+		#gform_submit_button_1 {
+			border-radius: 0px;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			text-transform: uppercase;
+			border: none;
+			padding: 10px 20px;
+			font-size: 18px;
+			background-color: $btn-normal;
+			color: white;
+			float: right;
+			&:hover {
+				background-color: $btn-hover;
+			}
+		}
+	}
 }

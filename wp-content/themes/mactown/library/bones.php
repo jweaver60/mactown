@@ -134,6 +134,9 @@ function bones_scripts_and_styles() {
     // OWL Slider carousel JS
     wp_register_script( 'owl-carousel-js', get_stylesheet_directory_uri(). '/library/js/libs/owl.carousel.min.js', array('jquery'), '1.0.0', false );
 
+    // FitText JS
+    wp_register_script( 'fittext', get_stylesheet_directory_uri(). '/library/js/libs/jquery.fittext.js', array('jquery'), '1.0.0', false );
+
     // bootstrap 3.0.0 CSS
     wp_register_style( 'bootstrap-css', get_stylesheet_directory_uri(). '/library/css/bootstrap.min.css', array(), '3.0.0', 'all' );
 
@@ -169,6 +172,7 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'bones-modernizr' );
     wp_enqueue_script( 'bootstrap-js' );
     wp_enqueue_script( 'owl-carousel-js' );
+    wp_enqueue_script( 'fittext' );
     wp_enqueue_style( 'bootstrap-css' );
     wp_enqueue_style( 'fontawesome' );
     wp_enqueue_style( 'owl-carousel' );

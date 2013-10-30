@@ -183,6 +183,37 @@ you can use the generic selector below, but it's slower:
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  /* line 77, ../scss/_768up.scss */
+  #gform_wrapper_1 ul li input[type=text] {
+    width: 47% !important;
+  }
+  /* line 82, ../scss/_768up.scss */
+  #gform_wrapper_1 ul li:last-child .ginput_container {
+    float: right;
+    width: 51% !important;
+    margin-top: -212px !important;
+  }
+  /* line 86, ../scss/_768up.scss */
+  #gform_wrapper_1 ul li:last-child .ginput_container textarea {
+    height: 186px;
+  }
+  /* line 92, ../scss/_768up.scss */
+  #gform_wrapper_1 #gform_submit_button_1 {
+    border-radius: 0px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #00cae9;
+    color: white;
+    float: right;
+  }
+  /* line 102, ../scss/_768up.scss */
+  #gform_wrapper_1 #gform_submit_button_1:hover {
+    background-color: #11cbea;
+  }
 }
 /* line 19, ../scss/style.scss */
 body {
@@ -926,4 +957,129 @@ blockquote cite {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 1.15em;
   font-weight: 300;
+}
+
+/* line 674, ../scss/style.scss */
+.retail-section .retail-header i {
+  font-size: 2.5em;
+  color: white;
+  background: #2f353e;
+  padding: 0.5em;
+  display: block;
+  border-radius: 3em;
+  float: left;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  width: 2.05em;
+  text-align: center;
+  clear: both;
+}
+/* line 688, ../scss/style.scss */
+.retail-section .retail-header h3 {
+  color: #2f353e;
+  text-transform: uppercase;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+/* line 696, ../scss/style.scss */
+.retail-section p {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.15em;
+  color: #89909b;
+  line-height: 1.5em;
+  margin-left: 6.75em;
+}
+
+/* line 706, ../scss/style.scss */
+#brand-row {
+  background: url(../images/testimonials_bg.png) no-repeat;
+  background-size: cover;
+}
+/* line 709, ../scss/style.scss */
+#brand-row h1.section-title {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: white;
+  font-size: 3em;
+}
+/* line 715, ../scss/style.scss */
+#brand-row p.section-content {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.15em;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+/* line 723, ../scss/style.scss */
+#brand-row .brand-section img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+}
+
+/* line 732, ../scss/style.scss */
+.contact-description {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  color: #89909b;
+  text-align: center;
+}
+
+/* line 741, ../scss/style.scss */
+.form-header {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #2f353e;
+  font-size: 1.5em;
+}
+
+/* line 748, ../scss/style.scss */
+.gfield_label {
+  display: none !important;
+}
+
+/* line 752, ../scss/style.scss */
+input[type=text], textarea {
+  background: #eeeeee;
+  padding: 1em !important;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 0.95em !important;
+  color: #89909b !important;
+  margin-bottom: 2em;
+}
+
+/* line 766, ../scss/style.scss */
+#gform_wrapper_1 ul li input[type=text] {
+  width: 100%;
+}
+/* line 771, ../scss/style.scss */
+#gform_wrapper_1 ul li:last-child .ginput_container {
+  float: right;
+  width: 100%;
+  margin-top: 0px;
+}
+/* line 775, ../scss/style.scss */
+#gform_wrapper_1 ul li:last-child .ginput_container textarea {
+  height: 186px;
+}
+/* line 781, ../scss/style.scss */
+#gform_wrapper_1 #gform_submit_button_1 {
+  border-radius: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #00cae9;
+  color: white;
+  float: right;
+}
+/* line 791, ../scss/style.scss */
+#gform_wrapper_1 #gform_submit_button_1:hover {
+  background-color: #11cbea;
 }

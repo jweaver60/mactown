@@ -34,6 +34,7 @@ require_once( 'library/team-post-type.php' ); // you can disable this if you lik
 require_once( 'library/partners-post-type.php' );
 require_once( 'library/testimonial-post-type.php' );
 require_once( 'library/updates-post-type.php' );
+require_once( 'library/brand-post-type.php' );
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets

@@ -7,7 +7,7 @@ Template Name: Home Page
 <?php get_header(); ?>
 
 	<!-- Home Page Content -->
-	<div class="row">
+	<div class="row" id="home">
 		<?php $home_page = get_post(5); ?>
 			<div id="carousel-home-page" class="carousel slide">
 			  <!-- Indicators -->
@@ -33,6 +33,12 @@ Template Name: Home Page
 			    <div class="item active">
 			      <img src="<?php the_field('slider_image_1', 5); ?>">
 			    </div>
+			    <div class="item">
+			    	<img src="<?php the_field('slider_image_2', 5); ?>">
+			    </div>
+			    <div class="item">
+			    	<img src="<?php the_field('slider_image_3', 5); ?>">
+			    </div>
 			  </div>
 
 			  <!-- Controls -->
@@ -57,7 +63,7 @@ Template Name: Home Page
 	</div><!-- end row -->
 
 	<!-- About Us Page Content -->
-	<div class="row with-padding">
+	<div class="row with-padding" id="about-us">
 		<?php $about_us_page = get_post(14); ?>
 			<h1 class="section-title"><?php echo $about_us_page->post_title; ?></h1>
 			<h4 class="section-subtitle"><?php the_field('about_us_subtitle', 14); ?></h4>
@@ -141,7 +147,7 @@ Template Name: Home Page
 	</div>
 
 	<!-- Services Page Content (top) -->
-	<div class="row with-padding small-bottom-padding with-gray-bg">
+	<div class="row with-padding small-bottom-padding with-gray-bg" id="services">
 		<?php $services_page = get_post(46); ?>
 			<h1 class="section-title"><?php echo $services_page->post_title; ?></h1>
 			<h4 class="section-subtitle"><?php the_field('services_subtitle', 46); ?></h4>
@@ -293,7 +299,7 @@ Template Name: Home Page
 	</div>
 
 	<!-- Blog Page Section -->
-	<div class="row with-padding with-gray-bg">
+	<div class="row with-padding with-gray-bg" id="trending">
 		<?php $blog_page = get_post(7); ?>
 		<h1 class="section-title"><?php echo $blog_page->post_title; ?></h1>
 		<h4 class="section-subtitle"><?php the_field('trending_subtitle', 7); ?></h4>
@@ -354,5 +360,105 @@ Template Name: Home Page
 			<?php endwhile; ?>
 		</div>
 	</div>
+
+	<!-- Retail Page Content -->
+	<div class="row with-padding with-gray-bg small-bottom-padding" id="retail">
+		<?php $retail_page = get_post(105); ?>
+			<h1 class="section-title"><?php echo $retail_page->post_title; ?></h1>
+			<h4 class="section-subtitle"><?php the_field('retail_subheader', 105); ?></h4>
+			<hr class="short" />
+			<div class="col-xs-12 col-sm-5">
+				<blockquote>
+					<p><?php the_field('retail_quote', 105); ?></p>
+					<small><cite title="<?php the_field('retail_quote_citation', 105); ?>"><?php the_field('retail_quote_citation', 105); ?></cite></small>
+				</blockquote>
+			</div>
+			<div class="col-xs-12 col-sm-7">
+				<p class="section-content"><?php echo $retail_page->post_content; ?></p>
+			</div>
+		</div>
+		<div class="row with-gray-bg with-padding no-vertical-padding small-bottom-padding">
+			<div class="col-xs-12 col-sm-6 retail-section">
+				<?php $apple_products_page = get_post(108); ?>
+				<span class="retail-header">
+					<i class="icon-apple"></i>
+					<h3><?php echo $apple_products_page->post_title; ?></h3>
+				</span>
+				<p>
+					<?php echo $apple_products_page->post_content; ?>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="col-xs-12 col-sm-6 retail-section">
+				<?php $mac_accessories_page = get_post(110); ?>
+				<span class="retail-header">
+					<i class="icon-desktop"></i>
+					<h3><?php echo $mac_accessories_page->post_title; ?></h3>
+				</span>
+				<p>
+					<?php echo $mac_accessories_page->post_content; ?>
+				</p>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="row with-gray-bg with-padding small-top-padding">
+			<div class="col-xs-12 col-sm-6 retail-section">
+				<?php $ios_accessories_page = get_post(112); ?>
+				<span class="retail-header">
+					<i class="icon-mobile-phone"></i>
+					<h3><?php echo $ios_accessories_page->post_title; ?></h3>
+				</span>
+				<p>
+					<?php echo $ios_accessories_page->post_content; ?>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="col-xs-12 col-sm-6 retail-section">
+				<?php $latest_software = get_post(114); ?>
+				<span class="retail-header">
+					<i class="icon-keyboard"></i>
+					<h3><?php echo $latest_software->post_title; ?></h3>
+				</span>
+				<p>
+					<?php echo $latest_software->post_content; ?>
+				</p>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<!-- Brands Page Section -->
+		<div class="row with-padding no-horizontal-padding" id="brand-row">
+			<?php $brands_page = get_post(116); ?>
+			<div class="extra-padding">
+				<h1 class="section-title"><?php echo $brands_page->post_title; ?></h1>
+				<p class="section-content"><?php echo $brands_page->post_content; ?></p>
+			</div>
+			<div class="owl-carousel" id="brand-carousel">
+				<?php
+					$brand_args = array('post_type' => 'brand');
+					$brand_loop = new WP_Query($brand_args);
+					while ($brand_loop->have_posts()) : $brand_loop->the_post();
+				?>
+					<div class="brand-section">
+						<a href="<?php the_field('brand_link'); ?>">
+							<?php the_post_thumbnail('full'); ?>
+						</a>
+					</div>
+				<?php endwhile; ?>
+			</div>
+		</div>
+
+		<!-- Contact Page Section -->
+		<div class="row with-padding" id="contact">
+			<?php $contact_page = get_post(126); ?>
+			<h1 class="section-title"><?php echo $contact_page->post_title; ?></h1>
+			<h4 class="section-subtitle"><?php the_field('contact_subheader', 126); ?></h4>
+			<hr class="short" />
+			<p class="contact-description">
+				<?php echo $contact_page->post_content; ?>
+			</p>
+			<h4 class="form-header">Send us a message</h4>
+			<?php gravity_form(1, $display_title=false, $display_description=false, $ajax=true); ?>
+		</div>
 
 <?php get_footer(); ?>

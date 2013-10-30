@@ -183,11 +183,39 @@ jQuery(document).ready(function($) {
 
     $("#updates-carousel").owlCarousel({
         items: 1,
+        itemsDesktop: false,
+        itemsDesktopSmall: false,
+        itemsTablet: false,
+        itemsMobile: false,
         navigation: true,
         navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
         pagination: false
     });
- 
+
+    $("#brand-carousel").owlCarousel({
+        items: 4,
+        navigation: true,
+        navigationText: ["<i class='icon-chevron-left'></i>", "<i class='icon-chevron-right'></i>"],
+        pagination: false
+    });
+
+    $(".first-slider-caption").fitText(1.7);
+    $(".second-slider-caption").fitText(1);
+
+    // Smooth page scrolling for top navigation
+    $(".scroll").click(function(event){
+        event.preventDefault();
+        //calculate destination place
+        var dest=0;
+        if($(this.hash).offset().top > $(document).height()-$(window).height()){
+            dest=$(document).height()-$(window).height();
+        }else{
+            dest=$(this.hash).offset().top;
+        }
+        //go to destination
+        $('html,body').animate({scrollTop:dest}, 1000,'swing');
+    });
+
 }); /* end of as page load scripts */
 
 

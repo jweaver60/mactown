@@ -58,12 +58,12 @@
 				  <!-- Collect the nav links, forms, and other content for toggling -->
 				  <div class="collapse navbar-collapse navbar-ex1-collapse">
 				    <ul class="nav navbar-nav navbar-right">
-				      <li><a href="#">Home</a></li>
-				      <li><a href="#">About</a></li>
-				      <li><a href="#">Services</a></li>
-				      <li><a href="#">Trending</a></li>
-				      <li><a href="#">Retail</a></li>
-				      <li><a href="#">Contact</a></li>
+				      <li><a href="#home" class="scroll">Home</a></li>
+				      <li><a href="#about-us" class="scroll">About</a></li>
+				      <li><a href="#services" class="scroll">Services</a></li>
+				      <li><a href="#trending" class="scroll">Trending</a></li>
+				      <li><a href="#retail" class="scroll">Retail</a></li>
+				      <li><a href="#contact" class="scroll">Contact</a></li>
 				    </ul>
 				  </div><!-- /.navbar-collapse -->
 				</nav>

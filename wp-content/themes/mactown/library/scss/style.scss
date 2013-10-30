@@ -668,3 +668,128 @@ blockquote {
 		}
 	}
 }
+
+.retail-section {
+	.retail-header {
+		i {
+			font-size: 2.5em;
+			color: white;
+			background: $almost-black;
+			padding: 0.5em;
+			display: block;
+			border-radius: 3em;
+			float: left;
+			margin-right: 1em;
+			margin-top: 0.5em;
+			width: 2.05em;
+			text-align: center;
+			clear: both;
+		}
+		h3 {
+			color: $almost-black;
+			text-transform: uppercase;
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			font-weight: 700;
+			font-size: 1.5em;			
+		}
+	}
+	p {
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-weight: 300;
+		font-size: 1.15em;
+		color: $quote-citation;
+		line-height: 1.5em;
+		margin-left: 6.75em;
+	}
+}
+
+#brand-row {
+	background: url(../images/testimonials_bg.png) no-repeat;
+	background-size: cover;
+	h1.section-title {
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-weight: 100;
+		color: white;
+		font-size: 3em;
+	}
+	p.section-content {
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		font-size: 1.15em;
+		color: white;
+		font-weight: 300;
+		text-align: center;
+	}
+	.brand-section {
+		img {
+			width: 50%;
+			margin: 0 auto;
+			display: block;
+			height: auto;
+		}
+	}
+}
+
+.contact-description {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	color: $quote-citation;
+	text-align: center;
+}
+
+// Forms!
+
+.form-header {
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: $almost-black;
+	font-size: 1.5em;
+}
+
+.gfield_label {
+	display: none !important;
+}
+
+input[type=text], textarea {
+	background: #eeeeee;
+	padding: 1em !important;
+	border: none;
+	border-radius: 3px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	font-size: 0.95em !important;
+	color: $quote-citation !important;
+	margin-bottom: 2em;
+}
+
+#gform_wrapper_1 {
+	ul {
+		li {
+			input[type=text] {
+				width: 100%;
+			}
+		}
+		li:last-child {
+			.ginput_container {
+				float: right;
+				width: 100%;
+				margin-top: 0px;
+				textarea {
+					height: 186px;
+				}
+			}
+		}
+	}
+	#gform_submit_button_1 {
+		border-radius: 0px;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		border: none;
+		padding: 10px 20px;
+		font-size: 18px;
+		background-color: $btn-normal;
+		color: white;
+		float: right;
+		&:hover {
+			background-color: $btn-hover;
+		}
+	}
+}
