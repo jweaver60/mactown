@@ -11,7 +11,7 @@
 		<?php // Google Chrome Frame for IE ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php wp_title(' | ', true, 'right'); ?></title>
+		<title><?php bloginfo('name'); wp_title(' | ', true, 'left'); ?></title>
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
@@ -69,3 +69,4 @@
 				</nav>
 			</div>
 		</div>
+		<div class="container">
