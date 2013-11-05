@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-			<div id="content">
+			<div class="row">
 
 				<div id="inner-content" class="wrap clearfix">
 
@@ -67,6 +67,6 @@
 
 				</div> <?php // end #inner-content ?>
 
-			</div> <?php // end #content ?>
+			</div> <!-- end row -->
 
 <?php get_footer(); ?>
