@@ -1,43 +1,13 @@
 <?php get_header(); ?>
 
-			<div id="content">
-
-				<div id="inner-content" class="wrap clearfix">
-
-					<div id="main" class="eightcol first clearfix" role="main">
-
-						<article id="post-not-found" class="hentry clearfix">
-
-							<header class="article-header">
-
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
-
-							</header> <?php // end article header ?>
-
-							<section class="entry-content">
-
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
-
-							</section> <?php // end article section ?>
-
-							<section class="search">
-
-									<p><?php get_search_form(); ?></p>
-
-							</section> <?php // end search section ?>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer> <?php // end article footer ?>
-
-						</article> <?php // end article ?>
-
-					</div> <?php // end #main ?>
-
-				</div> <?php // end #inner-content ?>
-
-			</div> <?php // end #content ?>
+	<div class="row">
+		<div class="col-xs-12 col-md-4">
+			<div class="notfound-bg"></div>
+		</div>
+		<div class="col-xs-12 col-md-8">
+			<h1>Four oh four!</h1>
+			<p>We couldn't find what you were looking for, unfortunately. But if you head back to the <a href="<?php echo site_url(); ?>">home page</a> you may be able find something.</p>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

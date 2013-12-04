@@ -1,61 +1,70 @@
 <?php get_header(); ?>
+<div class="blog-container">
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<div id="content">
+		<div class="row">
+			<div class="col-xs-12">
+				<header class="article-header">
+					<h1><?php the_title(); ?></h1>
+					<h4><?php echo get_the_category_list(', '); ?></h4>
+				</header>
+				<hr class="left">
+			</div>
+		</div>
 
-				<div id="inner-content" class="wrap clearfix">
+		<div class="row">
+			<div class="col-xs-12 col-md-8">
 
-					<div id="main" class="eightcol first clearfix" role="main">
+				<article id="post-<?php the_ID(); ?>" role="article" class="post-article">
+					<div class="main-image">
+						<?php the_post_thumbnail('full'); ?>
+					</div>
+					<div class="author-avatar">
+						<?php echo get_avatar(get_the_author_meta('ID'), 70); ?>
+					</div>
+					<div class="post-content">
+						<?php the_content(); ?>
+					</div>
+					<div class="post-metadata">
+						<div class="row">
+							<div class="col-xs-6">
+								<p><i class="icon-calendar"></i> <?php echo get_the_time( get_option('date_format')); ?></p>
+							</div>
+							<div class="col-xs-2">
+								<p><i class="icon-comment"></i> <?php comments_number('0', '1', '%'); ?></p>
+							</div>
+							<div class="col-xs-4">
+								<p><i class="icon-plus-sign-alt"></i></p>
+							</div>
+						</div>
+					</div>
+				</article>
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php comments_template(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+				<?php endwhile; ?>
 
-								<header class="article-header">
+				<?php else : ?>
 
-									<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( get_option('date_format')), bones_get_the_author_posts_link(), get_the_category_list(', ') );
-									?></p>
+					<article id="post-not-found" class="hentry clearfix">
+							<header class="article-header">
+								<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+							</header>
+							<section class="entry-content">
+								<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+							</section>
+							<footer class="article-footer">
+									<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>
+							</footer>
+					</article>
 
-								</header> <?php // end article header ?>
+				<?php endif; ?>
 
-								<section class="entry-content clearfix" itemprop="articleBody">
-									<?php the_content(); ?>
-								</section> <?php // end article section ?>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<?php get_sidebar(); ?>
+		</div>
 
-								<footer class="article-footer">
-									<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer> <?php // end article footer ?>
-
-								<?php comments_template(); ?>
-
-							</article> <?php // end article ?>
-
-						<?php endwhile; ?>
-
-						<?php else : ?>
-
-							<article id="post-not-found" class="hentry clearfix">
-									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-									</header>
-									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-									</section>
-									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>
-									</footer>
-							</article>
-
-						<?php endif; ?>
-
-					</div> <?php // end #main ?>
-
-					<?php get_sidebar(); ?>
-
-				</div> <?php // end #inner-content ?>
-
-			</div> <?php // end #content ?>
-
+	</div>
+</div>
 <?php get_footer(); ?>

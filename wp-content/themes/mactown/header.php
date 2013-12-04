@@ -41,6 +41,42 @@
 
 	<body <?php body_class(); ?>>
 
+		<!-- Modal -->
+		<div class="modal fade" id="locationsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">LOCATIONS</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div class="row">
+		        	<div class="col-xs-12">
+		        		<address>
+									<strong>The Greene</strong><br />
+									Address: 4398 Holly Dr. Dayton, Ohio<br />
+									Telephone: 937-435-0134<br />
+									Store Hours: Mon-Sat 10AM - 9PM<br />
+									Store Hours: Sunday 12PM - 6PM
+								</address>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<address>
+									<strong>South Dayton</strong><br />
+									Address: 8975 Kingsridge Dr. Dayton, Ohio<br />
+									Telephone: 937-435-0134<br />
+									Store Hours: Mon-Fri 9AM - 7PM<br />
+									Store Hours: Closed Saturday &amp; Sunday
+								</address>
+							</div>
+						</div>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
 		<div class="row">
 			<div class="col-xs-12">
 				<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -58,12 +94,23 @@
 				  <!-- Collect the nav links, forms, and other content for toggling -->
 				  <div class="collapse navbar-collapse navbar-ex1-collapse">
 				    <ul class="nav navbar-nav navbar-right">
-				      <li><a href="#home" class="scroll">Home</a></li>
-				      <li><a href="#about-us" class="scroll">About</a></li>
-				      <li><a href="#services" class="scroll">Services</a></li>
-				      <li><a href="#trending" class="scroll">Trending</a></li>
-				      <li><a href="#retail" class="scroll">Retail</a></li>
-				      <li><a href="#contact" class="scroll">Contact</a></li>
+				    	<?php if (is_front_page()) { ?>
+					      <li><a href="#home" class="scroll">Home</a></li>
+					      <li><a href="#services" class="scroll">Services</a></li>
+					      <li><a href="#retail" class="scroll">Products</a></li>
+					      <li><a href="#trending" class="scroll">Trending</a></li>
+					      <li><a href="#about-us" class="scroll">About</a></li>
+					      <li><a href="#contact" class="scroll">Connect</a></li>
+					      <li><a href="#" data-toggle="modal" data-target="#locationsModal">Locations</a></li>
+					    <?php } else { ?>
+					    	<li><a href="<?php echo site_url(); ?>#home">Home</a></li>
+					      <li><a href="<?php echo site_url(); ?>#services">Services</a></li>
+					      <li><a href="<?php echo site_url(); ?>#retail">Products</a></li>
+					      <li><a href="<?php echo site_url(); ?>#trending">Trending</a></li>
+					      <li><a href="<?php echo site_url(); ?>#about-us">About</a></li>
+					      <li><a href="<?php echo site_url(); ?>#contact">Connect</a></li>
+					      <li><a href="#" data-toggle="modal" data-target="#locationsModal">Locations</a></li>
+					    <?php } ?>
 				    </ul>
 				  </div><!-- /.navbar-collapse -->
 				</nav>
