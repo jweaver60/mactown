@@ -21,7 +21,7 @@ Template Name: Home Page
 				<div class="carousel-caption">
 					<div class="caption-wrapper">
 						<div class="caption-inner">
-					    	<span class="line"></span><h4 class="first-slider-caption"><?php the_field('slider_caption_line_1', 5); ?></h4><span class="line"></span>
+					    	<span class="line" style="margin-top: 20%;"></span><h4 class="first-slider-caption"><?php the_field('slider_caption_line_1', 5); ?></h4><span class="line"></span>
 					    	<h2 class="second-slider-caption"><?php the_field('slider_caption_line_2', 5); ?></h2>
 					    	<span class="line bottom"></span>
 					  	</div>
@@ -31,7 +31,7 @@ Template Name: Home Page
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner">
 			    <div class="item active">
-			      <img src="<?php the_field('slider_image_1', 5); ?>">
+			      <img src="<?php the_field('slider_image_1', 5); ?>" style="position: fixed; z-index: -9999;">
 			    </div>
 			   <!--  <div class="item">
 			    	<img src="<?php the_field('slider_image_2', 5); ?>">
@@ -50,12 +50,12 @@ Template Name: Home Page
 			  </a> -->
 			</div><!-- end carousel -->
 	</div><!-- end row -->
-	<div class="row with-padding">
+	<div class="row with-padding with-white-bg" style="margin-top: 40%;">
 		<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-			<div class="block-header">
-				<h2>The</h2>
+			<div class="block-header" id="mactownExperience">
+<!-- 				<h2>The</h2>
 				<h2>MacTown</h2>
-				<h2>Experience</h2>
+				<h2>Experience</h2> -->
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-7 col-md-8 col-lg-9 comp-margin">
@@ -66,8 +66,8 @@ Template Name: Home Page
 	<!-- Services Page Content (top) -->
 	<div class="row with-padding small-bottom-padding with-gray-bg" id="services">
 		<?php $services_page = get_post(46); ?>
-			<h1 class="section-title"><?php echo $services_page->post_title; ?></h1>
-			<h4 class="section-subtitle"><?php the_field('services_subtitle', 46); ?></h4>
+			<h1 class="section-title background-logo"><?php echo $services_page->post_title; ?></h1>
+			<!-- <h4 class="section-subtitle"><?php // the_field('services_subtitle', 46); ?></h4> -->
 			<hr class="short" />
 			<div class="col-xs-12 col-sm-7">
 				<p class="section-content"><?php echo $services_page->post_content; ?></p>
@@ -80,7 +80,7 @@ Template Name: Home Page
 	</div>
 
 	<!-- Apple Specialist Page Content (middle) -->
-	<div class="row with-padding no-top-padding services-main-content" id="apple-specialist-content">
+	<div class="row with-padding no-top-padding services-main-content with-white-bg" id="apple-specialist-content">
 		<div class="row">
 			<a class="close-icon" id="apple-specialist-close" href="#"><i class="icon-remove"></i></a>
 		</div>
@@ -94,7 +94,7 @@ Template Name: Home Page
 	</div>
 
 	<!-- Sessions Page Content (middle) -->
-	<div class="row with-padding no-top-padding services-main-content" id="sessions-content">
+	<div class="row with-padding no-top-padding services-main-content with-white-bg" id="sessions-content">
 		<div class="row">
 			<a href="#" class="close-icon" id="sessions-close"><i class="icon-remove"></i></a>
 		</div>
@@ -110,7 +110,7 @@ Template Name: Home Page
 	</div>
 
 	<!-- Business Solutions Page Content (middle) -->
-	<div class="row with-padding no-top-padding services-main-content" id="business-solutions-content">
+	<div class="row with-padding no-top-padding services-main-content with-white-bg" id="business-solutions-content">
 		<div class="row">
 			<a href="#" class="close-icon" id="business-solutions-close"><i class="icon-remove"></i></a>
 		</div>
@@ -125,7 +125,7 @@ Template Name: Home Page
 	</div>
 
 	<!-- Service Page Content (middle) -->
-	<div class="row with-padding no-top-padding services-main-content" id="service-content">
+	<div class="row with-padding no-top-padding services-main-content with-white-bg" id="service-content">
 		<div class="row">
 			<a href="#" class="close-icon" id="service-close"><i class="icon-remove"></i></a>
 		</div>
@@ -212,8 +212,8 @@ Template Name: Home Page
 	<!-- Retail Page Content -->
 	<div class="row with-padding with-gray-bg small-bottom-padding" id="retail">
 		<?php $retail_page = get_post(105); ?>
-			<h1 class="section-title"><?php echo $retail_page->post_title; ?></h1>
-			<h4 class="section-subtitle"><?php the_field('retail_subheader', 105); ?></h4>
+			<h1 class="section-title background-logo"><?php echo $retail_page->post_title; ?></h1>
+			<!-- <h4 class="section-subtitle"><?php // the_field('retail_subheader', 105); ?></h4> -->
 			<hr class="short" />
 			<div class="col-xs-12 col-sm-5">
 				<blockquote>
@@ -280,13 +280,15 @@ Template Name: Home Page
 				<h1 class="section-title"><?php echo $brands_page->post_title; ?></h1>
 				<p class="section-content"><?php echo $brands_page->post_content; ?></p>
 			</div>
-			<div class="owl-carousel" id="brand-carousel">
+			<!-- <div class="owl-carousel" id="brand-carousel"> -->
+			<div class="row" style="margin-top: 4em;">
 				<?php
-					$brand_args = array('post_type' => 'brand');
+					$brand_args = array('post_type' => 'brand', 'posts_per_page' => -1);
 					$brand_loop = new WP_Query($brand_args);
 					while ($brand_loop->have_posts()) : $brand_loop->the_post();
 				?>
-					<div class="brand-section">
+					<!-- <div class="brand-section"> -->
+					<div class="col-xs-12 col-sm-6 col-md-3 brand-section">
 						<?php if (the_field('brand_link')) { ?>
 							<a href="<?php the_field('brand_link'); ?>">
 								<?php the_post_thumbnail('full'); ?>
@@ -302,8 +304,8 @@ Template Name: Home Page
 	<!-- Blog Page Section -->
 	<div class="row with-padding with-gray-bg" id="trending">
 		<?php $blog_page = get_post(7); ?>
-		<h1 class="section-title"><a href="<?php echo site_url(); ?>/trending"><?php echo $blog_page->post_title; ?></a></h1>
-		<h4 class="section-subtitle"><?php the_field('trending_subtitle', 7); ?></h4>
+		<h1 class="section-title background-logo"><a href="<?php echo site_url(); ?>/trending"><?php echo $blog_page->post_title; ?></a></h1>
+		<!-- <h4 class="section-subtitle"><?php // the_field('trending_subtitle', 7); ?></h4> -->
 		<hr class="short" />
 		<div class="row">
 			<?php
@@ -313,7 +315,9 @@ Template Name: Home Page
 			?>
 				<div class="col-xs-12 col-sm-4 trending-post">
 					<div class="featured-image">
-						<?php the_post_thumbnail('full'); ?>
+						<a href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail('full'); ?>
+						</a>
 					</div>
 					<div class="author-avatar">
 						<?php echo get_avatar(get_the_author_meta('ID'), 50); ?>
@@ -336,7 +340,7 @@ Template Name: Home Page
 							</div>
 							<div class="col-xs-3">
 								<span class="meta-section">
-									<i class="icon-plus-sign-alt"></i>
+									<a href="<?php the_permalink(); ?>" class="blog-expand"><i class="icon-plus-sign-alt"></i></a>
 								</span>
 							</div>
 						</div>
@@ -382,10 +386,10 @@ Template Name: Home Page
 	</div>
 
 	<!-- About Us Page Content -->
-	<div class="row with-padding" id="about-us">
+	<div class="row with-padding with-white-bg" id="about-us">
 		<?php $about_us_page = get_post(14); ?>
-			<h1 class="section-title"><?php echo $about_us_page->post_title; ?></h1>
-			<h4 class="section-subtitle"><?php the_field('about_us_subtitle', 14); ?></h4>
+			<h1 class="section-title background-logo"><?php echo $about_us_page->post_title; ?></h1>
+			<!-- <h4 class="section-subtitle"><?php // the_field('about_us_subtitle', 14); ?></h4> -->
 			<hr class="short" />
 			<div class="col-xs-12 section-featured-image">
 				<?php echo get_the_post_thumbnail(14, 'full'); ?>
@@ -460,10 +464,17 @@ Template Name: Home Page
 	</div>
 
 		<!-- Contact Page Section -->
-		<div class="row with-padding" id="contact">
+		<div class="row with-padding with-white-bg" id="contact">
 			<?php $contact_page = get_post(126); ?>
-			<h1 class="section-title"><?php echo $contact_page->post_title; ?></h1>
-			<h4 class="section-subtitle"><?php the_field('contact_subheader', 126); ?></h4>
+			<h1 class="section-title background-logo"><?php echo $contact_page->post_title; ?></h1>
+			<!-- <h4 class="section-subtitle"><?php // the_field('contact_subheader', 126); ?></h4> -->
+			<div class="footer-support-icons">
+				<ul>
+					<li><a href="#"><i class="rdm-linkedin-sign"></i></a></li>
+					<li><a href="#"><i class="rdm-twitter-sign"></i></a></li>
+					<li><a href="#"><i class="rdm-facebook-sign"></i></a></li>
+				</ul>
+			</div>
 			<hr class="short" />
 			<p class="contact-description">
 				<?php echo $contact_page->post_content; ?>
@@ -474,25 +485,15 @@ Template Name: Home Page
 				<div class="clear"></div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6">
-				<h4 class="form-header">Support &amp; Sessions</h4>
+				<h4 class="form-header">Support</h4>
 				<p class="contact-description" style="text-align: left;">MacTown proudly offers Residential and Corporate Onsite support, as well as training at your place or ours. Tell us what you need, we are here to help.</p>
-				<div class="footer-support-icons">
-					<ul>
-						<li><a href="http://www.mactown.com/sessions/index.php?r=site/login"><i class="rdm-sessions"></i></a></li>
-						<li><a href="#"><i class="rdm-medkit"></i></a></li>
-					</ul>
-				</div>
+				<a href="#" class="btn btn-primary" style="float: right;"><i class="rdm-medkit"></i> Support</a>
 				<div class="clear"></div>
 				<br /><br />
-				<img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="MacTown" class="footer-logo">
-				<p class="contact-description" style="text-align: left;">Connect with us on Facebook, Twitter or LinkedIn</p>
-				<div class="footer-support-icons">
-					<ul>
-						<li><a href="#"><i class="rdm-linkedin-sign"></i></a></li>
-						<li><a href="#"><i class="rdm-twitter-sign"></i></a></li>
-						<li><a href="#"><i class="rdm-facebook-sign"></i></a></li>
-					</ul>
-				</div>
+				<h4 class="form-header">Sessions</h4>
+				<p class="contact-description" style="text-align: left;">MacTown proudly offers Residential and Corporate Onsite support, as well as training at your place or ours. Tell us what you need, we are here to help.</p>
+				<a href="http://www.mactown.com/sessions/index.php?r=site/login" class="btn btn-primary" style="float: right;"><i class="rdm-sessions"></i> Sessions</a>
+				<div class="clear"></div>
 			</div>
 		</div>
 

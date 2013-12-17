@@ -138,4 +138,73 @@
 		}
 	}
 }
+.footer {
+	background-color: $navbar-bg-color;
+	padding: 2em;
+	color: $footer-font-color;
+	.footer-logo {
+		width: 120px;
+		margin-bottom: 1em;
+	}
+	h2 {
+		color: white;
+		font-size: 1.5em;
+		font-weight: 400;
+		margin-top: 1.5em;
+	}
+	p {
+		margin-bottom: 4px;
+		font-size: 0.9em;
+	}
+	.footer-social-icons {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				margin-right: 1em;
+				a {
+					color: $social-icon-color;
+					font-size: 2em;
+					text-decoration: none;
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.footer-support-icons {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			float: right;
+			li {
+				display: inline-block;
+				margin-left: 1em;
+				a {
+					color: $social-icon-color;
+					font-size: 2em;
+					text-decoration: none;
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.bottom-footer {
+		margin-top: 1em;
+		p {
+			text-align: left !important;
+			color: $copyright-color;
+			font-size: 0.85em;
+			&.telephone-number {
+				text-align: right !important;
+			}
+		}
+	}
+}
 }

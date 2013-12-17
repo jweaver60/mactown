@@ -61,6 +61,11 @@ body {
 				text-transform: uppercase;
 				font-weight: 400;
 				margin-right: 8px;
+				-o-transition:.5s;
+			  -ms-transition:.5s;
+			  -moz-transition:.5s;
+			  -webkit-transition:.5s;
+			  transition:.5s;
 			}
 		}
 	}
@@ -94,9 +99,10 @@ body {
 					display: none;
 				}
 				.first-slider-caption {
+					font-family: 'PT Sans', 'Helvetica', Arial, sans-serif;
+					font-weight: 400;
 					text-transform: uppercase;
-					font-weight: 100;
-					letter-spacing: 3px;
+					letter-spacing: -1px;
 					font-size: 1em;
 					background-color: transparent;
 					z-index: 9999;
@@ -105,6 +111,8 @@ body {
 					text-shadow: -1px -1px  5px #000;
 				}
 				.second-slider-caption {
+					font-family: 'PT Sans', 'Helvetica', Arial, sans-serif;
+					font-weight: 700;
 					text-transform: uppercase;
 					font-size: 2em;
 					text-shadow: -1px -1px 5px #000;
@@ -173,6 +181,10 @@ body {
 	background-color: $gray-bg-color;
 }
 
+.with-white-bg {
+	background-color: #fff;
+}
+
 .with-padding {
 	padding: 1em;
 	&.no-vertical-padding {
@@ -207,25 +219,31 @@ body {
 
 .block-header {
 	margin-bottom: 1.5em;
-	h2 {
-		text-transform: uppercase;
-		text-align: center;
-		font-weight: 700;
-		font-size: 3em;
-		margin: 0;
-		padding: 0;
-		color: $almost-black;
-		&:nth-child(1) {
-			font-size: 2.5em;
-			letter-spacing: 5px;
-		}
-		&:nth-child(2) {
-			font-size: 3.55em;
-		}
-		&:nth-child(3) {
-			font-size: 3em;
-		}
-	}
+	// h2 {
+	// 	text-transform: uppercase;
+	// 	text-align: center;
+	// 	font-weight: 700;
+	// 	font-size: 3em;
+	// 	margin: 0;
+	// 	padding: 0;
+	// 	color: $almost-black;
+	// 	&:nth-child(1) {
+	// 		font-size: 2.5em;
+	// 		letter-spacing: 5px;
+	// 	}
+	// 	&:nth-child(2) {
+	// 		font-size: 3.55em;
+	// 	}
+	// 	&:nth-child(3) {
+	// 		font-size: 3em;
+	// 	}
+	// }
+}
+
+#mactownExperience {
+	background: url('../images/mactown_experience.png') no-repeat center center;
+	height: 200px;
+	background-size: contain;
 }
 
 .footer {
@@ -258,26 +276,11 @@ body {
 					color: $social-icon-color;
 					font-size: 2em;
 					text-decoration: none;
-					&:hover {
-						color: white;
-					}
-				}
-			}
-		}
-	}
-	.footer-support-icons {
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			float: right;
-			li {
-				display: inline-block;
-				margin-left: 1em;
-				a {
-					color: $social-icon-color;
-					font-size: 2em;
-					text-decoration: none;
+					-o-transition:.5s;
+				  -ms-transition:.5s;
+				  -moz-transition:.5s;
+				  -webkit-transition:.5s;
+				  transition:.5s;
 					&:hover {
 						color: white;
 					}
@@ -286,7 +289,7 @@ body {
 		}
 	}
 	.bottom-footer {
-		margin-top: 5em;
+		margin-top: 1em;
 		p {
 			text-align: center;
 			color: $copyright-color;
@@ -302,6 +305,12 @@ body {
 	text-transform: uppercase;
 	font-size: 4em;
 	color: $almost-black;
+	&.background-logo {
+		background-image: url('../images/header_bg.png');
+		background-repeat: no-repeat;
+		background-position: center 0px;
+		padding-top: 110px;
+	}
 	a {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-weight: 700;
@@ -310,10 +319,10 @@ body {
 	font-size: 1em;
 	color: $almost-black;
 	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-		color: $btn-hover;
-	}
+		&:hover {
+			text-decoration: none;
+			color: $btn-hover;
+		}
 	}
 }
 
@@ -363,6 +372,7 @@ hr.short {
 	height: 4px;
 	color: $darker-gray;
 	background-color: $darker-gray;
+	margin-bottom: 3em;
 }
 
 blockquote {
@@ -382,7 +392,7 @@ blockquote {
 }
 
 .btn {
-	border-radius: 0px;
+	border-radius: 3px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	border: none;
@@ -390,6 +400,9 @@ blockquote {
 	font-size: 18px;
 	&.btn-primary {
 		background-color: $btn-normal;
+		i {
+			font-size: 1.25em;
+		}
 		&:hover {
 			background-color: $btn-hover;
 		}
@@ -509,6 +522,11 @@ blockquote {
 		margin-bottom: 1.5em;
 		.services-title {
 			text-decoration: none;
+			-o-transition:.5s;
+		  -ms-transition:.5s;
+		  -moz-transition:.5s;
+		  -webkit-transition:.5s;
+		  transition:.5s;
 			i {
 				font-size: 2.5em;
 				color: white;
@@ -521,6 +539,11 @@ blockquote {
 				margin-top: 0.5em;
 				width: 2em;
 				text-align: center;
+				-o-transition:.5s;
+			  -ms-transition:.5s;
+			  -moz-transition:.5s;
+			  -webkit-transition:.5s;
+			  transition:.5s;
 			}
 			h3 {
 				color: $almost-black;
@@ -528,6 +551,11 @@ blockquote {
 				font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 				font-weight: 700;
 				font-size: 1.5em;
+				-o-transition:.5s;
+			  -ms-transition:.5s;
+			  -moz-transition:.5s;
+			  -webkit-transition:.5s;
+			  transition:.5s;
 			}
 			&:hover, &.active {
 				i {
@@ -650,6 +678,9 @@ blockquote {
 		a {
 			text-decoration: none;
 			color: $team-blue;
+			&:hover {
+				color: $btn-hover;
+			}
 			h3 {
 				font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 				font-weight: 700;
@@ -815,7 +846,7 @@ input[type=text], input[type=email], input[type=url], textarea {
 		}
 	}
 	#gform_submit_button_1 {
-		border-radius: 0px;
+		border-radius: 3px;
 		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		text-transform: uppercase;
 		border: none;
@@ -824,6 +855,11 @@ input[type=text], input[type=email], input[type=url], textarea {
 		background-color: $btn-normal;
 		color: white;
 		float: right;
+		-o-transition:.5s;
+	  -ms-transition:.5s;
+	  -moz-transition:.5s;
+	  -webkit-transition:.5s;
+	  transition:.5s;
 		&:hover {
 			background-color: $btn-hover;
 		}
@@ -1055,6 +1091,11 @@ ol.commentlist {
 			color: $dark-gray;
 			font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 			font-size: 1.15em;
+			-o-transition:.5s;
+		  -ms-transition:.5s;
+		  -moz-transition:.5s;
+		  -webkit-transition:.5s;
+		  transition:.5s;
 			&:hover {
 				background-color: $btn-hover;
 				color: white;
@@ -1133,10 +1174,13 @@ ol.commentlist {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
-		float: left;
+		text-align: center;
 		li {
 			display: inline-block;
-			margin-left: 1em;
+			margin-right: 1em;
+			&:last-child {
+				margin-right: 0px;
+			}
 			a {
 				color: $social-icon-color;
 				font-size: 2em;
@@ -1146,5 +1190,31 @@ ol.commentlist {
 				}
 			}
 		}
+	}
+}
+
+a {
+	-o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.blog-expand {
+	color: $dark-gray;
+	text-decoration: none;
+	&:hover {
+		color: $team-blue;
+		text-decoration: none;
+	}
+}
+
+.brand-section {
+	height: 150px;
+	overflow: hidden;
+	img {
+		display: block;
+		margin: 0 auto;
 	}
 }
